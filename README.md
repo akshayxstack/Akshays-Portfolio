@@ -2,6 +2,10 @@
 
 Personal portfolio website for showcasing Akshay's skills, projects, professional journey, resume, and contact details.
 
+## Live Website
+
+Visit the deployed portfolio at [akshys-portfolio.vercel.app](https://akshys-portfolio.vercel.app/).
+
 ## Overview
 
 This is a lightweight, responsive static website built with plain HTML, CSS, and JavaScript. It has no build step, package manager, or runtime dependency.
