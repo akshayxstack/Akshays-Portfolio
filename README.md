@@ -4,7 +4,7 @@ Personal portfolio website for showcasing Akshay's skills, projects, professiona
 
 ## Live Website
 
-Visit the deployed portfolio at [akshayys-portfolio.vercel.app](akshayys-portfolio.vercel.app).
+Visit the deployed portfolio at [akshayys-portfolio.vercel.app](https://akshayys-portfolio.vercel.app/).
 
 ## Overview
 
