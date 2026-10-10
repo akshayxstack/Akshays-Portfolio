@@ -1,0 +1,9 @@
+html{background:#160f0a}
+@keyframes navin{from{opacity:0}}
+body{animation:navin .45s ease}
+html.nav-zoom{overflow:hidden}
+html.nav-zoom body{transform:scale(2.4);opacity:0;transition:transform .5s cubic-bezier(.6,0,.9,.4),opacity .5s ease-in;pointer-events:none}
+html.nav-fade body{opacity:0;transition:opacity .26s ease-in;pointer-events:none}
+.wall{transition:filter .7s}
+html.lights-off .wall{filter:brightness(.55)}
+@media(prefers-reduced-motion:reduce){body{animation:none}html.nav-zoom body,html.nav-fade body{transition:none}}

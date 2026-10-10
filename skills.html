@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Skills &amp; Projects — Akshay</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="js/nav.css">
+<script src="js/nav.js"></script>
+<style>
+:root{--esp:#160f0a;--amber:#f0b050;--honey:#ffd89a;--copper:#e0824f;--sage:#a9c18a;--rose:#d9907a;--cream:#f8eddc;--mist:#bfab91;--line:rgba(248,237,220,.13);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--esp);color:var(--cream);font-family:"Geist",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wall{position:fixed;inset:0;z-index:-1;transform:translateZ(0);background:linear-gradient(105deg,#110a06,#241610 55%,#2d1d16)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--honey);outline-offset:3px}
+.back{position:fixed;top:calc(20px + env(safe-area-inset-top,0px));left:clamp(16px,3vw,44px);z-index:20;font:500 14px "Geist Mono",monospace;color:var(--amber);text-decoration:none;padding:8px 14px;border-radius:99px;border:1px solid rgba(227,168,87,.35);background:rgba(13,9,7,.9)}
+.back:hover{background:rgba(227,168,87,.18)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+/* intro */
+.intro{padding:120px 0 40px}
+.eye{font:500 14px "Geist Mono",monospace;color:var(--amber);margin-bottom:14px}
+h1{font:800 clamp(44px,6.4vw,92px)/1 "Fraunces",Georgia,serif;letter-spacing:-.03em}
+h1 em{font-weight:500;color:var(--honey)}
+.intro p{margin-top:20px;max-width:34em;font-size:clamp(17px,1.5vw,20px);line-height:1.65;color:#d2c2a9}
+.jump{display:flex;gap:10px;margin-top:26px}
+.jump a{font:500 13.5px "Geist Mono",monospace;color:var(--cream);text-decoration:none;padding:8px 16px;border-radius:99px;border:1px solid var(--line);transition:.2s}
+.jump a:hover{border-color:var(--amber);color:var(--amber)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+/* skills */
+.sec{padding:56px 0 24px}
+.sh{display:flex;align-items:baseline;gap:16px;margin-bottom:26px}
+.sh h2{font:800 clamp(30px,3.6vw,46px)/1.05 "Fraunces",serif;letter-spacing:-.02em}
+.sh span{font:400 14px "Geist Mono",monospace;color:var(--mist)}
+.flow{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:16px}
+.sk{--a:var(--amber);position:relative;padding:24px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(248,237,220,.07),rgba(248,237,220,.02));overflow:hidden}
+.sk.main{border-color:rgba(240,176,80,.55);background:linear-gradient(160deg,rgba(240,176,80,.20),rgba(248,237,220,.02))}.sk.ai{--a:var(--copper);border-color:rgba(224,130,79,.38);background:linear-gradient(160deg,rgba(224,130,79,.13),rgba(248,237,220,.02))}.sk.fs{--a:var(--sage);border-color:rgba(169,193,138,.3);background:linear-gradient(160deg,rgba(169,193,138,.10),rgba(248,237,220,.02))}.sk::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--a)}
+.sk .n{font:500 12px "Geist Mono",monospace;color:var(--a);letter-spacing:.08em}
+.sk h3{font:800 28px/1.1 "Fraunces",serif;margin:6px 0 4px}
+.sk .t{font-size:14px;color:var(--mist);margin-bottom:16px}
+.sk h4{font:500 12px "Geist Mono",monospace;color:var(--a);margin:14px 0 8px;opacity:.9}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{font-size:13.5px;padding:5px 12px;border-radius:99px;border:1px solid rgba(248,237,220,.2);background:rgba(13,9,7,.35);transition:.2s}
+.sk.main .chips span{border-color:rgba(227,168,87,.45)}
+.sk .chips span:hover{border-color:var(--a);color:var(--a)}.chips span:hover{border-color:var(--amber);color:var(--honey);transform:translateY(-2px)}
+.arrow{display:flex;justify-content:center;margin:22px 0 4px;font:500 14px "Geist Mono",monospace;color:var(--amber);gap:12px;align-items:center;flex-wrap:wrap}
+.arrow b{font-weight:500;padding:6px 16px;border-radius:99px;background:linear-gradient(145deg,var(--honey),var(--amber));color:var(--esp)}
+/* projects */
+.proj{--c:#f0b050;display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;padding:44px 0}
+.proj.flip{grid-template-columns:1fr 1.3fr}.proj.flip .shot{order:2}
+.shot{position:relative;display:block;text-decoration:none;perspective:1400px}
+.frame{border-radius:14px;overflow:hidden;background:#fff;border:1px solid rgba(240,200,140,.22);box-shadow:0 40px 70px -28px #000,0 0 90px -34px var(--c);transform:rotateY(-2deg);backface-visibility:hidden;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.flip .frame{transform:rotateY(2deg)}
+.shot:hover .frame,.shot:focus-visible .frame{transform:translateY(-8px) scale(1.015);box-shadow:0 56px 80px -30px #000,0 0 120px -26px var(--c)}
+.chrome{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#2b1e15}
+.chrome i{width:9px;height:9px;border-radius:50%}.chrome i:nth-child(1){background:#d9695a}.chrome i:nth-child(2){background:#e0a94d}.chrome i:nth-child(3){background:#a9c18a}
+.chrome u{margin-left:10px;flex:1;text-decoration:none;font:400 11.5px "Geist Mono",monospace;color:#a89478;background:#1a120c;border-radius:6px;padding:3px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame{position:relative}.frame img{display:block;width:100%;height:auto;transition:transform .5s}.frame .tint{display:none}
+.vis{display:block;padding:18px;background:#1a120c}
+.view{position:absolute;right:16px;bottom:16px;font:500 13px "Geist Mono",monospace;color:var(--esp);background:var(--amber);padding:7px 14px;border-radius:99px;opacity:0;transform:translateY(8px);transition:.3s}
+.shot:hover .view,.shot:focus-visible .view{opacity:1;transform:none}
+.info .no{font:500 13px "Geist Mono",monospace;color:var(--c)}.info .no::after{content:"";display:inline-block;width:38px;height:2px;margin-left:10px;vertical-align:middle;background:var(--c)}
+.info h3{font:800 clamp(30px,3.4vw,44px)/1.05 "Fraunces",serif;letter-spacing:-.02em;margin:8px 0 6px}
+.info .cat{font:400 13.5px "Geist Mono",monospace;color:var(--mist)}
+.info p{margin:16px 0 18px;font-size:17px;line-height:1.65;color:#d9c9b0;max-width:30em}
+.info .chips span{font-size:13px;border-color:color-mix(in srgb,var(--c) 45%,transparent)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:500 14.5px "Geist",sans-serif;text-decoration:none;padding:11px 20px;border-radius:99px;transition:.2s}
+.btn.p{color:var(--esp);background:linear-gradient(145deg,var(--honey),color-mix(in srgb,var(--c) 70%,#e0a94d))}.btn.p:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(244,201,130,.7)}
+.btn.g{color:var(--cream);border:1px solid rgba(248,237,220,.28)}.btn.g:hover{background:rgba(248,237,220,.08)}
+.hl{display:inline-block;margin-top:2px;font:500 12px "Geist Mono",monospace;color:var(--esp);background:var(--honey);padding:3px 10px;border-radius:6px}
+hr{border:0;border-top:1px dashed var(--line)}
+/* insurance chart visual */
+.vis svg{display:block;width:100%;height:auto}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2s ease .3s}.in .draw{stroke-dashoffset:0}
+.end{padding:40px 0 140px;text-align:center}
+.end p{font:italic 500 clamp(24px,3vw,40px)/1.3 "Fraunces",serif;color:var(--honey)}
+.end code{font:500 .55em "Geist Mono",monospace;font-style:normal;color:var(--esp);background:var(--amber);padding:3px 12px;border-radius:8px}
+/* dock */
+.dock{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(500px,92vw);z-index:30}
+.msg{text-align:center;font:400 13px "Geist Mono",monospace;color:#9fd18b;margin-bottom:8px;opacity:0;transition:opacity .25s;text-shadow:0 1px 4px #000}.msg.show{opacity:1}
+.tin{display:flex;align-items:center;gap:9px;padding:12px 20px;border-radius:99px;background:rgba(13,9,7,.92);border:1px solid rgba(227,168,87,.4);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 40px -16px #000;font:400 15px "Geist Mono",monospace;color:var(--amber);cursor:text}
+.tin em{font-style:normal;color:#7d6a55}.tin input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--cream);font:inherit;caret-color:var(--amber)}.tin input::placeholder{color:#6b5844}
+@media(max-width:900px){.flow{grid-template-columns:1fr}.proj,.proj.flip{grid-template-columns:1fr;gap:26px}.proj.flip .shot{order:0}.frame,.flip .frame{transform:none}.intro{padding-top:100px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.frame{transition:none}.draw{stroke-dashoffset:0;transition:none}}
+
+.prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--copper),var(--amber),var(--honey));z-index:40}
+.sk::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(255,216,154,.13),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}.sk:hover::after{opacity:1}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.stats div{padding:12px 20px;border-radius:14px;border:1px solid var(--line);background:rgba(248,237,220,.04)}.stats b{display:block;font:800 28px/1 "Fraunces",serif;color:var(--honey)}.stats span{font:400 12.5px "Geist Mono",monospace;color:var(--mist)}
+.dots{position:fixed;right:clamp(10px,2vw,28px);top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;gap:14px}
+.dots a{width:11px;height:11px;border-radius:50%;border:2px solid rgba(248,237,220,.4);background:transparent;transition:.25s;position:relative}.dots a.on{background:var(--amber);border-color:var(--amber);box-shadow:0 0 12px rgba(240,176,80,.7)}
+.dots a::before{content:attr(data-l);position:absolute;right:20px;top:50%;transform:translateY(-50%);font:500 12px "Geist Mono",monospace;color:var(--cream);background:rgba(13,9,7,.85);padding:3px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}.dots a:hover::before{opacity:1}
+.lb{position:fixed;inset:0;z-index:60;display:none;place-items:center;padding:20px;background:rgba(10,6,3,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.lb.open{display:grid;animation:fd .25s}@keyframes fd{from{opacity:0}}
+.lb figure{max-width:min(1200px,96vw);text-align:center}.lb img{max-width:100%;max-height:78vh;border-radius:12px;box-shadow:0 40px 80px -20px #000,0 0 100px -30px var(--amber)}.lb figcaption{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;align-items:center;font:500 14px "Geist Mono",monospace;color:var(--mist)}
+.lb button.x{position:absolute;right:18px;top:16px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(13,9,7,.7);color:var(--cream);font-size:24px;cursor:pointer}
+@media(max-width:1100px){.dots{display:none}}
+@media(prefers-reduced-motion:reduce){.sk::after{display:none}.lb.open{animation:none}}
+</style>
+</head>
+<body>
+<div class="wall"></div><div class="prog" id="prog"></div>
+<nav class="dots" aria-label="Sections"><a href="#top" data-l="intro" class="on"></a><a href="#skills" data-l="skills"></a><a href="#projects" data-l="projects"></a></nav>
+<a class="back" href="index.html" id="home">← home</a>
+
+<header class="wrap intro" id="top">
+<div class="eye">// skills &amp; projects</div>
+<h1>Data in. <em>Products out.</em></h1>
+<p>The tools I use, and five things I’ve built with them.</p>
+<div class="stats rv"><div><b>15+</b><span>projects</span></div><div><b>6+</b><span>live demos</span></div><div><b>3</b><span>skill areas</span></div></div>
+<nav class="jump" aria-label="On this page"><a href="#skills">Skills</a><a href="#projects">Projects</a></nav>
+</header>
+
+<main class="wrap">
+<section class="sec" id="skills">
+<div class="sh rv"><h2>Skills</h2><span>Data → AI → Code</span></div>
+<div class="flow">
+<article class="sk main rv"><div class="n">01 · PRIMARY</div><h3>Data</h3><div class="t">Analysis, BI and storytelling</div>
+<h4>// analysis</h4><div class="chips"><span>Data Cleaning</span><span>EDA</span><span>Statistical Analysis</span><span>Correlation</span><span>Outlier Detection</span><span>Feature Engineering</span></div>
+<h4>// python &amp; sql</h4><div class="chips"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>SQL</span><span>Joins &amp; Aggregation</span></div>
+<h4>// business intelligence</h4><div class="chips"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Excel</span><span>Data Modeling</span><span>Star Schema</span><span>KPI Analysis</span></div></article>
+<article class="sk ai rv" style="transition-delay:.1s"><div class="n">02 · SECONDARY</div><h3>AI / ML</h3><div class="t">Predict, explain, retrieve</div>
+<h4>// machine learning</h4><div class="chips"><span>Regression</span><span>Logistic Regression</span><span>KNN</span><span>Naive Bayes</span><span>XGBoost</span><span>SMOTE</span><span>Scikit-learn</span></div>
+<h4>// generative ai</h4><div class="chips"><span>LLMs</span><span>Gemini</span><span>RAG</span><span>Embeddings</span><span>LangChain</span><span>ChromaDB</span><span>Prompt Engineering</span></div></article>
+<article class="sk fs rv" style="transition-delay:.2s"><div class="n">03 · PRODUCT</div><h3>Full Stack</h3><div class="t">Apps around the problem</div>
+<h4>// frontend</h4><div class="chips"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span></div>
+<h4>// backend</h4><div class="chips"><span>Node.js</span><span>Express</span><span>FastAPI</span><span>REST</span><span>JWT</span></div>
+<h4>// data &amp; deploy</h4><div class="chips"><span>MongoDB Atlas</span><span>Render</span><span>Vercel</span><span>AWS</span><span>Git</span></div></article>
+</div>
+<div class="arrow rv"><span>Analysis</span>→<span>Insight</span>→<span>Intelligence</span>→<b>Real solutions</b></div>
+</section>
+
+<section class="sec" id="projects">
+<div class="sh rv"><h2>Projects</h2><span>five things I’ve built</span></div>
+
+<article class="proj rv" style="--c:#e0824f">
+<a class="shot" href="https://github.com/akshayxstack/ElectViz_Election-Data-Visualization-for-Media" target="_blank" rel="noopener" aria-label="ElectViz on GitHub" data-zoom><div class="frame"><div class="chrome"><i></i><i></i><i></i><u>Power BI · India General Elections 2024</u></div><img src="assets/electviz.jpg" alt="ElectViz Power BI dashboard showing the 2024 India general election overview" loading="lazy"><span class="tint"></span></div><span class="view">Click to enlarge screenshot ⤢</span></a>
+<div class="info"><div class="no">01</div><h3>ElectViz</h3><div class="cat">Data Analytics · Visualization · BI</div>
+<p>A Power BI dashboard on the 2024 India general elections, built for media storytelling. Raw data from CSV, Excel and APIs is modelled into a star schema, so you can drill from alliance to party to seat.</p>
+<div class="chips"><span>Power BI</span><span>DAX</span><span>SQL</span><span>Star Schema</span></div>
+<div class="links"><a class="btn p" href="https://github.com/akshayxstack/ElectViz_Election-Data-Visualization-for-Media" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</article><hr>
+
+<article class="proj flip rv" style="--c:#d9695a">
+<a class="shot" href="https://fraud-guard-ai-phi.vercel.app/" target="_blank" rel="noopener" aria-label="Open FraudGuard AI live demo" data-zoom><div class="frame"><div class="chrome"><i></i><i></i><i></i><u>fraud-guard-ai-phi.vercel.app</u></div><img src="assets/fraudguard.jpg" alt="FraudGuard AI landing page with an investigation dashboard preview" loading="lazy"><span class="tint"></span></div><span class="view">Click to enlarge screenshot ⤢</span></a>
+<div class="info"><div class="no">02</div><h3>FraudGuard AI</h3><div class="cat">Machine Learning · GenAI · Full Stack</div>
+<p>Spots suspicious card transactions with an XGBoost model, then uses Gemini to explain in plain English why each one was flagged.</p>
+<div class="chips"><span>React</span><span>Node</span><span>FastAPI</span><span>XGBoost</span><span>Gemini</span><span>MongoDB</span></div>
+<div class="links"><a class="btn p" href="https://fraud-guard-ai-phi.vercel.app/" target="_blank" rel="noopener">Live demo ↗</a><a class="btn g" href="https://github.com/akshayxstack/FraudGuard-AI" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</article><hr>
+
+<article class="proj rv" style="--c:#9db88a">
+<a class="shot" href="https://docsensei-pdf-and-docx.streamlit.app/" target="_blank" rel="noopener" aria-label="Open DocSensei live demo" data-zoom><div class="frame"><div class="chrome"><i></i><i></i><i></i><u>docsensei-pdf-and-docx.streamlit.app</u></div><img src="assets/docsensei.jpg" alt="DocSensei app: Ask Your Document screen with sidebar for upload, indexing and chunking comparison" loading="lazy"><span class="tint"></span></div><span class="view">Click to enlarge screenshot ⤢</span></a>
+<div class="info"><div class="no">03</div><h3>DocSensei</h3><div class="cat">Generative AI · RAG · NLP</div>
+<p>Upload a PDF or DOCX and ask it questions in plain English. Every answer is pulled from your document and cites the page it came from.</p>
+<div class="chips"><span>Python</span><span>Streamlit</span><span>LangChain</span><span>ChromaDB</span><span>RAG</span></div>
+<span class="hl">Tested different ways of splitting documents</span>
+<div class="links"><a class="btn p" href="https://docsensei-pdf-and-docx.streamlit.app/" target="_blank" rel="noopener">Live demo ↗</a><a class="btn g" href="https://github.com/akshayxstack/DocSensei-PDF-and-DOCX-Q-A" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</article><hr>
+
+<article class="proj flip rv" style="--c:#f0b050">
+<a class="shot" href="https://github.com/akshayxstack/Insurance-Cost-Analysis-and-Prediction" target="_blank" rel="noopener" aria-label="Insurance Cost Analysis on GitHub"><div class="frame"><div class="chrome"><i></i><i></i><i></i><u>insurance_analysis.ipynb</u></div>
+<div class="vis"><svg viewBox="0 0 480 330" role="img" aria-label="Insurance analysis preview: BMI vs charges scatter with regression line, smoker vs non-smoker charges, and a correlation heatmap">
+<defs><linearGradient id="ib" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd89a"/><stop offset="1" stop-color="#e07a4a"/></linearGradient><linearGradient id="ig" x1="0" x2="1"><stop offset="0" stop-color="#f0b050" stop-opacity=".0"/><stop offset="1" stop-color="#f0b050" stop-opacity=".25"/></linearGradient></defs>
+<g font-family="Geist Mono,monospace" font-size="10" fill="#bfab91">
+<rect x="8" y="8" width="290" height="170" rx="10" fill="#241810" stroke="rgba(248,237,220,.12)"/>
+<text x="20" y="28" fill="#f8eddc" font-size="11">BMI vs Charges</text>
+<g stroke="rgba(248,237,220,.08)"><path d="M28 150h254M28 120h254M28 90h254M28 60h254"/></g>
+<g fill="#7d6a55" opacity=".85"><circle cx="50" cy="140" r="3.2"/><circle cx="70" cy="132" r="3.2"/><circle cx="88" cy="142" r="3.2"/><circle cx="104" cy="128" r="3.2"/><circle cx="122" cy="136" r="3.2"/><circle cx="140" cy="124" r="3.2"/><circle cx="160" cy="130" r="3.2"/><circle cx="178" cy="118" r="3.2"/><circle cx="196" cy="124" r="3.2"/><circle cx="214" cy="114" r="3.2"/><circle cx="62" cy="146" r="3.2"/><circle cx="150" cy="140" r="3.2"/></g>
+<g fill="#f0b050"><circle cx="110" cy="100" r="4"/><circle cx="130" cy="88" r="4"/><circle cx="152" cy="80" r="4"/><circle cx="172" cy="68" r="4"/><circle cx="194" cy="76" r="4"/><circle cx="214" cy="58" r="4"/><circle cx="236" cy="50" r="4"/><circle cx="256" cy="44" r="4"/><circle cx="188" cy="92" r="4"/></g>
+<path class="draw" pathLength="1" d="M36 146L276 52" fill="none" stroke="#f8eddc" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="206" cy="24" r="4" fill="#f0b050"/><text x="214" y="27">smoker</text><circle cx="258" cy="24" r="3.4" fill="#7d6a55"/><text x="265" y="27" font-size="9">non</text>
+<text x="20" y="170">BMI →</text>
+<rect x="306" y="8" width="166" height="170" rx="10" fill="#241810" stroke="rgba(248,237,220,.12)"/>
+<text x="318" y="28" fill="#f8eddc" font-size="11">Smoker impact</text>
+<rect x="336" y="104" width="46" height="52" rx="4" fill="#7d6a55"/><rect x="400" y="52" width="46" height="104" rx="4" fill="url(#ib)"/>
+<path d="M326 156h130" stroke="rgba(248,237,220,.25)"/><text x="334" y="170">no</text><text x="404" y="170">yes</text>
+<rect x="8" y="186" width="464" height="132" rx="10" fill="#241810" stroke="rgba(248,237,220,.12)"/>
+<text x="20" y="206" fill="#f8eddc" font-size="11">Correlation heatmap</text>
+<g transform="translate(20,214)">
+<g fill-opacity="1"><rect width="22" height="16" x="0" y="0" rx="3" fill="#f0b050"/><rect width="22" height="16" x="24" y="0" rx="3" fill="#6b4a29"/><rect width="22" height="16" x="48" y="0" rx="3" fill="#4a3220"/><rect width="22" height="16" x="72" y="0" rx="3" fill="#4a3220"/><rect width="22" height="16" x="96" y="0" rx="3" fill="#a8672f"/>
+<rect width="22" height="16" x="0" y="18" rx="3" fill="#6b4a29"/><rect width="22" height="16" x="24" y="18" rx="3" fill="#f0b050"/><rect width="22" height="16" x="48" y="18" rx="3" fill="#4a3220"/><rect width="22" height="16" x="72" y="18" rx="3" fill="#4a3220"/><rect width="22" height="16" x="96" y="18" rx="3" fill="#8a5a2c"/>
+<rect width="22" height="16" x="0" y="36" rx="3" fill="#4a3220"/><rect width="22" height="16" x="24" y="36" rx="3" fill="#4a3220"/><rect width="22" height="16" x="48" y="36" rx="3" fill="#f0b050"/><rect width="22" height="16" x="72" y="36" rx="3" fill="#4a3220"/><rect width="22" height="16" x="96" y="36" rx="3" fill="#553823"/>
+<rect width="22" height="16" x="0" y="54" rx="3" fill="#4a3220"/><rect width="22" height="16" x="24" y="54" rx="3" fill="#4a3220"/><rect width="22" height="16" x="48" y="54" rx="3" fill="#4a3220"/><rect width="22" height="16" x="72" y="54" rx="3" fill="#f0b050"/><rect width="22" height="16" x="96" y="54" rx="3" fill="#ffd89a"/>
+<rect width="22" height="16" x="0" y="72" rx="3" fill="#a8672f"/><rect width="22" height="16" x="24" y="72" rx="3" fill="#8a5a2c"/><rect width="22" height="16" x="48" y="72" rx="3" fill="#553823"/><rect width="22" height="16" x="72" y="72" rx="3" fill="#ffd89a"/><rect width="22" height="16" x="96" y="72" rx="3" fill="#f0b050"/></g></g>
+<g font-size="9"><text x="140" y="226">age</text><text x="140" y="244">bmi</text><text x="140" y="262">children</text><text x="140" y="280">smoker</text><text x="140" y="298" fill="#ffd89a">charges</text></g>
+<g font-size="9"><text x="248" y="226" fill="#ffd89a">charges ↔ smoker</text><text x="248" y="244">strongest link</text><text x="248" y="262">bmi next</text></g>
+<path d="M300 222h160M300 262h160" stroke="rgba(248,237,220,.0)"/>
+<text x="248" y="306" font-size="9" fill="#7d6a55">illustrative charts</text>
+</g></svg></div></div><span class="view">Open notebook on GitHub ↗</span></a>
+<div class="info"><div class="no">04</div><h3>Insurance Cost Prediction</h3><div class="cat">Data Analysis · Predictive Analytics</div>
+<p>Finds out what drives medical insurance bills and predicts charges with Linear Regression. Smoking and BMI had the biggest impact.</p>
+<div class="chips"><span>Python</span><span>Pandas</span><span>Seaborn</span><span>Scikit-learn</span></div>
+<div class="links"><a class="btn p" href="https://github.com/akshayxstack/Insurance-Cost-Analysis-and-Prediction" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</article><hr>
+
+<article class="proj rv" style="--c:#b9a2c9">
+<a class="shot" href="https://lead-desk-mini-ochre.vercel.app/" target="_blank" rel="noopener" aria-label="Open LeadDesk Mini live demo" data-zoom><div class="frame"><div class="chrome"><i></i><i></i><i></i><u>lead-desk-mini-ochre.vercel.app</u></div><img src="assets/leaddesk.jpg" alt="LeadDesk Mini landing page with a lead submission form" loading="lazy"><span class="tint"></span></div><span class="view">Click to enlarge screenshot ⤢</span></a>
+<div class="info"><div class="no">05</div><h3>LeadDesk Mini</h3><div class="cat">Full Stack · Web · Database</div>
+<p>A mini CRM. Visitors submit a lead on the landing page, and an admin signs in to view and manage every lead. Covers the frontend, API and cloud database.</p>
+<div class="chips"><span>React</span><span>TypeScript</span><span>Express</span><span>MongoDB Atlas</span><span>JWT</span></div>
+<div class="links"><a class="btn p" href="https://lead-desk-mini-ochre.vercel.app/" target="_blank" rel="noopener">Live demo ↗</a><a class="btn g" href="https://github.com/akshayxstack/LeadDesk-Mini" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</article>
+</section>
+</main>
+
+<footer class="wrap end rv" id="end"><p>Want to build something together?<br><a class="btn p" id="cta" href="#" style="--c:#f0b050;font-size:16px;margin-top:18px">Get in touch →</a></p></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot preview"><button class="x" id="lx" aria-label="Close">×</button><figure><img id="li" alt=""><figcaption id="lc"></figcaption></figure></div>
+<div class="dock"><div class="msg" id="msg" aria-live="polite"></div>
+<label class="tin"><span>❯</span><em>npm</em><input id="ti" aria-label="Type a command" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type a command, try help"></label></div>
+<script>
+(function(){
+var d=document,ti=d.getElementById("ti"),msg=d.getElementById("msg");
+var els=d.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.15});els.forEach(function(c){io.observe(c)})}else els.forEach(function(c){c.classList.add("in")});
+function say(t){msg.textContent=t;msg.classList.add("show");clearTimeout(say.t);say.t=setTimeout(function(){msg.classList.remove("show")},3200)}
+function run(raw){Nav.handle(raw,{say:say})}
+ti.addEventListener("keydown",function(e){if(e.key==="Enter"){run(ti.value);ti.value=""}});
+d.getElementById("home").addEventListener("click",function(e){e.preventDefault();run("home")});
+d.getElementById("cta").addEventListener("click",function(e){e.preventDefault();run("contact")});
+var prog=d.getElementById("prog"),dots=[].slice.call(d.querySelectorAll(".dots a")),secs=dots.map(function(a){return d.querySelector(a.getAttribute("href"))});
+function onS(){var h=d.documentElement.scrollHeight-innerHeight;prog.style.transform="scaleX("+(h>0?scrollY/h:0)+")";var cur=0;secs.forEach(function(e,i){if(e&&e.getBoundingClientRect().top<innerHeight*.45)cur=i});dots.forEach(function(a,i){a.classList.toggle("on",i===cur)})}
+addEventListener("scroll",onS,{passive:true});onS();
+d.querySelectorAll(".sk").forEach(function(c){c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-r.left)+"px");c.style.setProperty("--my",(e.clientY-r.top)+"px")})});
+var lb=d.getElementById("lb"),li=d.getElementById("li"),lc=d.getElementById("lc"),last=null;
+function closeLb(){lb.classList.remove("open");if(last)last.focus()}
+d.querySelectorAll("a.shot[data-zoom]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();last=a;var im=a.querySelector("img"),t=a.closest(".proj").querySelector("h3").textContent;li.src=im.src;li.alt=im.alt;lc.innerHTML="";var s=d.createElement("span");s.textContent=t;lc.appendChild(s);var l=d.createElement("a");l.className="btn p";l.href=a.href;l.target="_blank";l.rel="noopener";l.textContent=a.href.indexOf("github.com")>-1?"GitHub ↗":"Open live demo ↗";lc.appendChild(l);lb.classList.add("open");d.getElementById("lx").focus()})});
+d.getElementById("lx").onclick=closeLb;lb.addEventListener("click",function(e){if(e.target===lb)closeLb()});addEventListener("keydown",function(e){if(e.key==="Escape"&&lb.classList.contains("open"))closeLb()});
+})();
+</script>
+</body>
+</html>

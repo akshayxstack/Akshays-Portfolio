@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akshay — Data Analyst</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="js/nav.css">
+<script src="js/nav.js"></script>
+<style>
+:root{--esp:#160f0a;--amber:#e3a857;--honey:#f4c982;--cream:#f8eddc;--mist:#bfab91;--rose:#e58f6b;--sage:#9fd18b;--oak1:#b0865a;--oak2:#8a6339;--oak3:#6b4a29;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--esp);color:var(--cream);font-family:"Geist",system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.hero{position:relative;height:100vh;height:100svh;min-height:680px;overflow:hidden}
+.wall{position:absolute;inset:0;background:linear-gradient(105deg,#120b07,#241810 55%,#33231a)}
+.wallglow{position:absolute;inset:0;background:radial-gradient(ellipse 45% 80% at 88% 26%,rgba(255,176,80,.34),transparent 70%);transition:opacity .7s}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 62% 40%,transparent 45%,rgba(0,0,0,.55));pointer-events:none;z-index:2}
+.dim{transition:filter .7s}.off .dim{filter:brightness(.3) saturate(.65)}.off .wallglow,.off .halo2{opacity:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--honey);outline-offset:3px}
+/* copy */
+.copy{position:absolute;left:96px;top:clamp(40px,calc(69% - 565px),16%);max-width:470px;z-index:8}
+.cm{font:400 15px "Geist Mono",monospace;color:var(--amber);margin-bottom:18px}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:800;font-size:clamp(54px,6vw,92px);line-height:1;letter-spacing:-.025em}
+h1 em{font-weight:500;font-style:italic;margin-right:.1em;color:var(--honey)}
+.role{display:flex;align-items:center;gap:6px;height:34px;margin:24px 0 18px;font:400 21px "Geist Mono",monospace}
+.role s{text-decoration:none;color:var(--amber)}.role b{width:10px;height:22px;background:var(--amber);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.sub{color:var(--mist);font-size:18.5px;line-height:1.65;max-width:430px}
+.tip{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font:400 14px "Geist Mono",monospace;color:var(--amber);padding:10px 16px;border:1px dashed rgba(227,168,87,.5);border-radius:10px}
+.tip kbd{font:inherit;color:var(--esp);background:var(--amber);border-radius:5px;padding:0 7px}
+/* bulb */
+.bulbwrap{position:absolute;right:6.5%;top:0;width:120px;height:330px;z-index:6;transform-origin:50% 0;animation:swing 3.8s ease-in-out infinite alternate}
+@keyframes swing{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+.on .fil{animation:flk 7s infinite}@keyframes flk{0%,100%{opacity:1}46%{opacity:.9}48%{opacity:.55}50%{opacity:1}}
+.bulbwrap svg{width:100%;height:100%;overflow:visible}
+.halo2{position:absolute;left:50%;top:235px;width:560px;height:560px;margin:-280px 0 0 -280px;background:radial-gradient(circle,rgba(255,180,90,.42),transparent 62%);transition:opacity .7s;pointer-events:none}
+.glass{fill:rgba(255,205,130,.28);transition:fill .5s}.off .glass{fill:rgba(255,255,255,.04)}
+.fil{stroke:#ffd596;transition:stroke .5s;filter:drop-shadow(0 0 6px #ffb347)}.off .fil{stroke:#5b4733;filter:none}
+.bulbhit{position:absolute;left:14px;top:112px;width:92px;height:214px;background:none;border:0;border-radius:40px;cursor:pointer}
+.hint{position:absolute;right:calc(6.5% + 118px);top:215px;z-index:8;font:400 13px "Geist Mono",monospace;color:var(--mist);animation:nudge 2.4s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+/* desk */
+.desk{position:absolute;left:0;right:0;bottom:0;height:31%;z-index:3;border-top:3px solid #9a7447;
+background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(40,22,6,.22) 119px 120px),linear-gradient(180deg,var(--oak2),var(--oak1) 45%,var(--oak2));box-shadow:inset 0 40px 50px -26px rgba(0,0,0,.55)}
+.desk::after{content:"";position:absolute;left:0;right:0;bottom:0;height:20px;background:var(--oak3)}
+.note{position:absolute;left:96px;top:36px;width:200px;padding:24px 18px 16px;background:linear-gradient(160deg,#f8e08a,#eec75a);color:#3a2a0a;font:600 25px/1.1 "Caveat",cursive;transform:rotate(-3deg);transform-origin:50% 0;box-shadow:0 16px 22px -10px rgba(0,0,0,.6),inset 0 -34px 40px -30px rgba(150,100,0,.4);transition:transform .35s;animation:flap 6s ease-in-out infinite}
+.note:hover{transform:rotate(0)}
+@keyframes flap{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(-1.6deg)}}
+.note::before{content:"";position:absolute;left:50%;top:-11px;width:58px;height:22px;margin-left:-29px;background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.3);transform:rotate(2deg)}
+.note kbd{display:block;width:max-content;margin:8px 0 6px;font:500 16px "Geist Mono",monospace;color:var(--honey);background:#3a2a0a;padding:3px 12px;border-radius:7px}
+.note kbd i{display:inline-block;width:8px;height:15px;margin-left:5px;vertical-align:-2px;background:var(--amber);animation:blink 1s steps(1) infinite}
+.note small{font-size:20px;opacity:.8}
+.note svg{position:absolute;right:-70px;top:44px;width:62px;overflow:visible}
+/* stage */
+.stage{position:absolute;left:62%;transform:translateX(-50%);width:min(640px,43vw);bottom:calc(31% - 34px);z-index:4}
+.mon{position:relative;background:linear-gradient(#2d241c,#171009);border-radius:20px;padding:16px 14px 8px;border:1px solid #5a4838;box-shadow:0 0 0 2px #0d0805,0 0 120px -10px rgba(244,201,130,.38),0 30px 40px -22px #000}
+.cam{position:absolute;left:50%;top:6px;width:5px;height:5px;margin-left:-2px;border-radius:50%;background:#0a0604;box-shadow:0 0 0 1.5px #3b2f25}
+.chin{height:20px;display:flex;align-items:center;justify-content:center}
+.led{width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.win{border-radius:9px;overflow:hidden;background:#0d0907;font:400 clamp(10px,.9vw,13px)/1.7 "Geist Mono",monospace;position:relative;border:1px solid #2b1f15}
+.win::after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.06),transparent 36%);pointer-events:none}
+.bar{display:flex;align-items:center;gap:7px;padding:9px 14px;border-bottom:1px solid #2b1f15}
+.bar i{width:11px;height:11px;border-radius:50%}.bar i:nth-child(1){background:#e5675a}.bar i:nth-child(2){background:#e8b44d}.bar i:nth-child(3){background:#7fc66a}
+.bar span{margin-left:auto;color:#7d6a55;font-size:.92em}
+.tbody{height:clamp(170px,31vh,300px);overflow-y:auto;padding:12px 16px 4px;color:#e9dcc7;white-space:pre-wrap;scrollbar-width:thin;scrollbar-color:#3d2d1f transparent}
+.tbody>div{animation:in .25s ease-out;margin-bottom:10px}@keyframes in{from{opacity:0;transform:translateY(4px)}}
+.pr{color:var(--amber)}.pr em{font-style:normal;color:#7d6a55}.pr span{color:var(--cream)}
+.c{display:inline-block;min-width:14ch;color:var(--amber);font-weight:500}
+.mu{color:#a6937b}.h{color:var(--honey)}.r{color:var(--rose)}.g{color:var(--sage)}.tbody a{color:var(--honey);text-underline-offset:3px}
+.tin{display:flex;gap:8px;padding:8px 16px;border-top:1px solid #2b1f15;color:var(--amber);cursor:text}
+.tin em{font-style:normal;color:#7d6a55}
+.tin input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--cream);font:inherit;caret-color:var(--amber)}
+.tin input::placeholder{color:#5f4e3d}
+.qk{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 11px}
+.qk button{font:inherit;font-size:.9em;line-height:1.5;color:var(--amber);background:rgba(227,168,87,.08);border:1px solid rgba(227,168,87,.28);border-radius:6px;padding:0 9px;cursor:pointer;transition:background .2s}
+.qk button:hover{background:rgba(227,168,87,.22)}
+.neck{width:96px;height:58px;margin:0 auto;clip-path:polygon(14% 0,86% 0,100% 100%,0 100%);background:linear-gradient(90deg,#7d6c50,#d4c2a2 45%,#7d6c50)}
+.foot{width:250px;height:16px;margin:0 auto;border-radius:60px 60px 8px 8px/100% 100% 8px 8px;background:linear-gradient(#e0d0b2,#9c8a6a);box-shadow:0 8px 16px rgba(0,0,0,.45)}
+.kb{position:absolute;left:50%;bottom:-36px;transform:translateX(-50%);width:62%;height:26px;border-radius:7px;background:repeating-linear-gradient(90deg,#2b2018 0 13px,#4a3b2f 13px 14px),#2b2018;border-top:2px solid #5a4838;box-shadow:0 10px 16px rgba(0,0,0,.45)}
+.ms{position:absolute;left:84%;bottom:-38px;width:28px;height:40px;border-radius:14px 14px 12px 12px;background:linear-gradient(#e0d0b2,#a8957a);box-shadow:0 8px 12px rgba(0,0,0,.4)}
+.ms::before{content:"";position:absolute;left:50%;top:0;height:15px;width:1.5px;background:#7d6c50}
+.prop{position:absolute;bottom:-34px;pointer-events:none;overflow:visible}
+.lf{transform-box:fill-box;transform-origin:50% 100%;animation:sway 4.5s ease-in-out infinite alternate}
+.lf:nth-child(2){animation-delay:-1.4s;animation-duration:5.2s}.lf:nth-child(3){animation-delay:-2.6s;animation-duration:3.9s}.lf:nth-child(4){animation-delay:-.8s;animation-duration:5.6s}
+@keyframes sway{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+.st{fill:none;stroke:#f6e8d6;stroke-width:3.6;stroke-linecap:round;opacity:0;transform-box:fill-box;transform-origin:50% 100%;animation:steam 3s ease-in-out infinite}
+@keyframes steam{0%{opacity:0;transform:translate(0,14px) scale(.8)}25%{opacity:.9}100%{opacity:0;transform:translate(var(--dx,8px),-52px) scale(1.25)}}
+.cof{transform-box:fill-box;transform-origin:center;animation:ripple 2.2s ease-in-out infinite alternate}
+@keyframes ripple{from{transform:scale(1)}to{transform:scale(.93,1.25)}}
+.mug{transform-box:fill-box;transform-origin:50% 100%;animation:mugb 6s ease-in-out infinite}
+@keyframes mugb{0%,90%,100%{transform:rotate(0)}94%{transform:rotate(-1.6deg)}97%{transform:rotate(1.2deg)}}
+@media(max-width:900px){
+ body{overflow:auto}.hero{min-height:1120px}
+ .copy{left:24px;right:24px;top:9%}.tip,.note,.hint{display:none}
+ .bulbwrap{right:5%;width:90px;height:250px}
+ .stage{left:50%;width:92vw;bottom:calc(31% - 20px)}.tbody{height:260px}.prop{display:none}
+}
+@media(prefers-reduced-motion:reduce){.lf,.st,.led,.hint,.role b,.cof,.mug,.bulbwrap,.fil{animation:none}.st{opacity:.5}}
+
+.now{display:flex;align-items:center;gap:10px;margin-top:16px;font:400 13.5px "Geist Mono",monospace;color:var(--mist)}
+.now i{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(240,176,80,.6);animation:ping 2s infinite}@keyframes ping{70%{box-shadow:0 0 0 9px rgba(240,176,80,0)}100%{box-shadow:0 0 0 0 rgba(240,176,80,0)}}
+.now b{color:var(--honey);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+.btn2{--f:#f5a574;--r:#d9763f;--o:#40180a;--t:#3a1405;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 14.5px "Geist Mono",monospace;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:var(--t);cursor:pointer;padding:15px 26px;border-radius:12px;border:2.5px solid var(--o);background:linear-gradient(var(--r) 0 4px,var(--f) 4px calc(100% - 4px),var(--r) calc(100% - 4px));box-shadow:0 5px 0 var(--o),0 14px 22px -8px rgba(0,0,0,.55);transition:transform .12s,box-shadow .12s,filter .2s}
+.btn2:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--o),0 18px 26px -8px rgba(0,0,0,.6);filter:brightness(1.05)}
+.btn2:active{transform:translateY(5px);box-shadow:0 0 0 var(--o),0 4px 8px -4px rgba(0,0,0,.5)}
+.btn2.g{--f:#ffd89a;--r:#e0a94d;--o:#4a2a08;--t:#4a2a08}
+.btn2.k{--f:#f8eddc;--r:#d8c5a6;--o:#2a1608;--t:#2a1608}
+.btn2 .ic{display:grid;place-items:center;transition:transform .25s}.btn2 .ic svg{stroke-width:3}
+.btn2:hover .ic{transform:translateY(2px)}.btn2.arr:hover .ic{transform:translate(3px,-3px)}
+.btn2 small{font:700 10px "Geist Mono",monospace;padding:2px 6px;border-radius:4px;background:var(--o);color:var(--f);letter-spacing:.06em}
+.cue{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);z-index:6;font:500 13px "Geist Mono",monospace;color:#2b1a0a;text-decoration:none;display:flex;align-items:center;gap:8px;background:rgba(248,237,220,.55);padding:7px 16px;border-radius:99px;border:1px solid rgba(43,26,10,.25)}
+.cue i{font-style:normal;animation:bobc 1.6s ease-in-out infinite}@keyframes bobc{50%{transform:translateY(5px)}}
+/* contact */
+.contact{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:radial-gradient(ellipse 50% 45% at 15% 30%,rgba(255,170,70,.14),transparent 70%),linear-gradient(180deg,#6b4a29 0,#2a1b12 110px,#1a110b 100%);transition:filter .7s}
+.contact::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:radial-gradient(rgba(248,237,220,.07) 1.2px,transparent 1.4px);background-size:26px 26px;mask-image:linear-gradient(180deg,transparent,#000 30%)}
+.contact.off{filter:brightness(.5) saturate(.7)}
+.band{overflow:hidden;margin-top:46px;border-block:1px solid rgba(248,237,220,.12);background:rgba(13,9,7,.35);padding:12px 0;position:relative}
+.track{display:flex;width:max-content;animation:mq 34s linear infinite;font:800 clamp(18px,2.2vw,28px) "Fraunces",serif;letter-spacing:-.01em;white-space:nowrap;will-change:transform}
+.grp{display:flex;gap:28px;padding-right:28px;flex:none}
+.track .w0{color:var(--cream)}.track .w1{color:var(--honey);font-style:italic;font-weight:500}.track .w2{color:#f5a574}.track .w3{color:var(--cream)}.track i{font-style:normal;color:var(--amber)}
+.band:hover .track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.cwrap{position:relative;flex:1;display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,80px);max-width:1180px;margin:0 auto;padding:72px clamp(20px,4vw,48px) 70px;width:100%;align-items:center}
+.contact .eye{font:500 14px "Geist Mono",monospace;color:var(--amber);margin-bottom:14px}
+.contact h2{font:800 clamp(42px,5.6vw,80px)/1.02 "Fraunces",Georgia,serif;letter-spacing:-.03em}
+.contact h2 em{font-weight:500;color:var(--honey)}
+.contact .lead{margin-top:18px;max-width:27em;font-size:clamp(17px,1.5vw,20px);line-height:1.65;color:#d2c2a9}
+.dial{margin-top:30px;display:grid;gap:16px;max-width:430px}
+.dial .row{display:flex;flex-wrap:wrap;gap:14px}
+.dial .lab{font:500 12px "Geist Mono",monospace;color:var(--mist);margin-bottom:-6px;letter-spacing:.08em;text-transform:uppercase}
+.addr{font:600 clamp(18px,2vw,24px)/1.2 "Geist",sans-serif;color:var(--cream);word-break:break-all}
+.addr b{color:var(--honey);font-weight:600}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.meta span{display:inline-flex;align-items:center;gap:8px;font:400 13px "Geist Mono",monospace;color:var(--cream);padding:7px 14px;border-radius:99px;border:1px solid rgba(248,237,220,.16);background:rgba(248,237,220,.04)}
+.meta i{width:7px;height:7px;border-radius:50%;background:#f5a574;box-shadow:0 0 8px #f5a574}
+/* postcard */
+.card{position:relative;transform:rotate(1.6deg);transition:transform .4s;background:#f6e9d2;color:#2a1608;border-radius:6px;padding:clamp(22px,2.6vw,34px);box-shadow:0 2px 0 #d8c5a6,0 40px 60px -26px #000,0 0 0 1px rgba(42,22,8,.25);background-image:repeating-linear-gradient(transparent 0 33px,rgba(120,80,40,.12) 33px 34px)}
+.card:hover,.card:focus-within{transform:rotate(0)}
+.card::before{content:"";position:absolute;inset:8px;border:2px dashed rgba(42,22,8,.22);border-radius:3px;pointer-events:none}
+.stamp{position:absolute;right:26px;top:-14px;width:78px;padding:6px;background:#f6e9d2;transform:rotate(5deg);box-shadow:0 6px 12px -6px #000;clip-path:polygon(0 4px,4px 0,8px 4px,12px 0,16px 4px,20px 0,24px 4px,28px 0,32px 4px,36px 0,40px 4px,44px 0,48px 4px,52px 0,56px 4px,60px 0,64px 4px,68px 0,72px 4px,76px 0,100% 4px,calc(100% - 4px) 8px,100% 12px,calc(100% - 4px) 16px,100% 20px,calc(100% - 4px) 100%,0 100%)}
+.stamp div{border:2px solid #40180a;background:#f5a574;color:#3a1405;text-align:center;padding:10px 0 6px;font:700 10px "Geist Mono",monospace;letter-spacing:.1em}
+.stamp b{display:block;font:800 26px/1 "Fraunces",serif;letter-spacing:-.02em}
+.pm{position:absolute;right:96px;top:6px;width:84px;height:84px;border-radius:50%;border:2px solid rgba(42,22,8,.35);display:grid;place-items:center;text-align:center;transform:rotate(-14deg);font:700 9.5px/1.35 "Geist Mono",monospace;color:rgba(42,22,8,.5);letter-spacing:.06em;pointer-events:none}
+.pm::after{content:"";position:absolute;inset:5px;border-radius:50%;border:1px solid rgba(42,22,8,.28)}
+.hw{font:700 34px/1 "Caveat",cursive;color:#7a3f12;margin-bottom:8px}
+.card .n{font:500 12.5px "Geist Mono",monospace;color:#6b4a29;margin-bottom:14px}
+.card label{display:block;font:500 11.5px "Geist Mono",monospace;color:#6b4a29;margin-bottom:12px;letter-spacing:.06em;text-transform:uppercase}
+.card input,.card textarea{display:block;width:100%;margin-top:6px;padding:11px 12px;border-radius:8px;border:2px solid #2a1608;background:#fffaf0;color:#2a1608;font:500 16px "Geist",sans-serif;resize:vertical;transition:.15s;box-shadow:3px 3px 0 rgba(42,22,8,.85)}
+.card input:focus,.card textarea:focus{outline:0;transform:translate(-1px,-1px);box-shadow:5px 5px 0 #d9763f}
+.card ::placeholder{color:#a08a6c}
+.card .btn2{width:100%;margin-top:8px}
+.card .hint2{margin-top:16px;font:400 12px "Geist Mono",monospace;color:#6b4a29;text-align:center}
+.cfoot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;max-width:1180px;width:100%;margin:0 auto;padding:22px clamp(20px,4vw,48px) calc(24px + env(safe-area-inset-bottom,0px));border-top:1px dashed rgba(248,237,220,.13);font:400 13px "Geist Mono",monospace;color:var(--mist)}
+.cfoot a{color:var(--amber);text-decoration:none}
+.cfoot{align-items:center;padding-top:30px}.sig{font:400 clamp(26px,3.2vw,40px)/1.2 "Homemade Apple","Caveat",cursive;color:var(--honey);transform:rotate(-2deg);display:inline-block;text-shadow:0 2px 14px rgba(240,176,80,.25)}
+@media(max-width:900px){.cwrap{grid-template-columns:1fr;padding-top:50px}.card{transform:none}.pm{display:none}.cue{display:none}.ctas{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cue i,.track,.now i,.btn2:active{transition:none}.card{transform:none}}
+
+/* mobile / tablet layout: copy on top, monitor below (no overlap) */
+@media(max-width:900px){
+ .hero{height:auto;min-height:0;display:flex;flex-direction:column;padding-bottom:118px}
+ .copy{position:relative;left:auto;right:auto;top:auto;max-width:none;padding:84px 24px 26px}
+ .stage{position:relative;left:auto;bottom:auto;transform:none;margin:8px auto 0;width:92vw}
+ .desk{height:152px}
+ .bulbwrap{z-index:5}
+ .sub{max-width:300px}
+}
+</style>
+</head>
+<body>
+<section class="hero on" id="hero">
+<div class="wall dim"></div><div class="wallglow"></div>
+
+<div class="copy">
+<div class="cm">// hello, world</div>
+<h1><em>I’m</em>Akshay.</h1>
+<div class="role"><span style="color:var(--amber)">&gt;</span><span id="t"></span><b></b></div>
+<p class="sub">I find the story hiding inside raw data, then build the thing that tells it.</p>
+<div class="now"><i></i><span>now exploring <b>agentic AI workflows</b></span></div>
+<div class="ctas"><a class="btn2" href="#contact"><span>Contact me</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a><a class="btn2 g" href="Akshay_Resume.pdf" download="Akshay_Resume.pdf" id="cvl"><span>Download CV</span><small>PDF</small><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a></div>
+<div class="tip">everything here runs in the terminal →</div>
+</div>
+
+<div class="bulbwrap" id="bulbwrap"><div class="halo2"></div>
+<svg viewBox="0 0 120 330" aria-hidden="true">
+<defs><linearGradient id="br" x1="0" x2="1"><stop offset="0" stop-color="#8a7248"/><stop offset=".5" stop-color="#d9c08a"/><stop offset="1" stop-color="#8a7248"/></linearGradient></defs>
+<line x1="60" y1="0" x2="60" y2="120" stroke="#100905" stroke-width="3"/><rect x="50" y="0" width="20" height="14" rx="2" fill="#4a3a28"/>
+<rect x="44" y="118" width="32" height="46" rx="3" fill="url(#br)"/><path d="M44 130h32M44 141h32M44 152h32" stroke="#6e5a36" stroke-width="1.5"/>
+<path class="glass" d="M42 166C20 200 18 262 40 300c10 18 30 18 40 0 22-38 20-100-2-134z" stroke="rgba(255,220,160,.55)" stroke-width="1.4"/>
+<path class="fil" d="M53 170v34l-9 14 16 16-16 16 16 16-8 14M67 170v34l9 14-16 16 16 16-16 16 8 14" fill="none" stroke-width="2.6"/>
+</svg>
+<button class="bulbhit" id="bulb" aria-pressed="true" aria-label="Turn the light on or off"></button></div>
+
+<div class="stage" id="stage">
+<div class="mon"><span class="cam"></span>
+<div class="win" id="win">
+<div class="bar"><i></i><i></i><i></i><span>guest@akshay: ~</span></div>
+<div class="tbody" id="tb" aria-live="polite"></div>
+<label class="tin"><span>❯</span><em>npm</em><input id="ti" aria-label="Terminal command" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type help"></label>
+<div class="qk"><button data-c="about">about</button><button data-c="skills">skills</button><button data-c="projects">projects</button><button data-c="experience">experience</button><button data-c="education">education</button><button data-c="contact">contact</button></div>
+</div>
+<div class="chin"><i class="led"></i></div></div>
+<div class="neck"></div><div class="foot"></div><div class="kb"></div><div class="ms"></div>
+
+<svg class="prop" style="left:-125px;width:104px" viewBox="0 0 104 140" aria-hidden="true">
+<g><path class="lf" d="M52 98C28 82 22 48 34 18c18 20 22 52 18 80z" fill="#587a45"/><path class="lf" d="M52 98C60 66 74 44 96 38c4 28-16 50-44 60z" fill="#7a9b58"/><path class="lf" d="M52 98C46 70 50 44 58 12c14 26 8 56-6 86z" fill="#4c6a38"/><path class="lf" d="M52 98C34 90 14 80 6 62c24-4 40 8 46 36z" fill="#6a8b4c"/></g>
+<path d="M22 96h60l-8 44H30z" fill="#b8683c"/><rect x="18" y="90" width="68" height="11" rx="3" fill="#cf7b4b"/></svg>
+
+<svg class="prop" style="right:-128px;width:98px" viewBox="0 0 100 104" aria-hidden="true">
+<defs><linearGradient id="mg" x1="0" x2="1"><stop offset="0" stop-color="#c9b08a"/><stop offset=".28" stop-color="#f8ecd6"/><stop offset=".62" stop-color="#efdec1"/><stop offset="1" stop-color="#c0a67c"/></linearGradient>
+<radialGradient id="cf"><stop offset="0" stop-color="#9a6a3f"/><stop offset="1" stop-color="#40240f"/></radialGradient>
+<linearGradient id="sc" x1="0" x2="1"><stop offset="0" stop-color="#cdb890"/><stop offset=".5" stop-color="#f1e3c8"/><stop offset="1" stop-color="#bda47b"/></linearGradient></defs>
+<ellipse cx="46" cy="99" rx="46" ry="5" fill="rgba(0,0,0,.3)"/>
+<ellipse cx="46" cy="94" rx="42" ry="8" fill="url(#sc)"/><ellipse cx="46" cy="92" rx="30" ry="5" fill="#d8c4a0"/>
+<path class="st" style="--dx:-6px" d="M30 40c-9-9 9-17 0-28s6-18 0-28"/>
+<path class="st" style="animation-delay:.6s;animation-duration:3.4s;--dx:6px" d="M39 40c-9-9 9-17 0-28s6-18 0-28"/>
+<path class="st" style="animation-delay:1.2s" d="M48 40c-9-9 9-17 0-28s6-18 0-28"/>
+<path class="st" style="animation-delay:1.8s;animation-duration:3.6s;--dx:-8px" d="M57 40c-9-9 9-17 0-28s6-18 0-28"/>
+<path class="st" style="animation-delay:2.3s;--dx:10px" d="M43 40c-9-9 9-17 0-28s6-18 0-28"/>
+<g class="mug"><path d="M76 54h7a12 12 0 010 28h-8" fill="none" stroke="#e6d3b0" stroke-width="7" stroke-linecap="round"/>
+<rect x="12" y="44" width="66" height="48" rx="13" fill="url(#mg)"/><rect x="19" y="52" width="5" height="30" rx="2.5" fill="rgba(255,255,255,.6)"/>
+<ellipse cx="45" cy="44" rx="33" ry="7" fill="#f8ecd6" stroke="#d9c3a0"/><ellipse cx="45" cy="45" rx="28" ry="5" fill="url(#cf)"/>
+<ellipse class="cof" cx="45" cy="45" rx="14" ry="2.2" fill="#b98652" opacity=".7"/>
+<text x="45" y="78" text-anchor="middle" font-family="Geist Mono,monospace" font-size="19" font-weight="500" fill="#c98a3c">&lt;/&gt;</text></g></svg>
+</div>
+
+<a class="cue" href="#contact">scroll for contact <i>↓</i></a>
+<div class="desk dim"><div class="note">psst… try typing<kbd>help<i></i></kbd><small>then press Enter ↵</small>
+<svg viewBox="0 0 62 40" fill="none" stroke="#3a2a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 30C20 38 40 32 56 12M44 10l13 2-4 13"/></svg></div></div>
+</section>
+<section class="contact" id="contact" aria-labelledby="ct">
+<div class="band" aria-hidden="true"><div class="track"><div class="grp"><span class="w0">Data</span><i>✦</i><span class="w1">Insight</span><i>✦</i><span class="w2">Intelligence</span><i>✦</i><span class="w3">Product</span><i>✦</i><span class="w0">Data</span><i>✦</i><span class="w1">Insight</span><i>✦</i><span class="w2">Intelligence</span><i>✦</i><span class="w3">Product</span><i>✦</i><span class="w0">Data</span><i>✦</i><span class="w1">Insight</span><i>✦</i><span class="w2">Intelligence</span><i>✦</i><span class="w3">Product</span><i>✦</i></div><div class="grp"><span class="w0">Data</span><i>✦</i><span class="w1">Insight</span><i>✦</i><span class="w2">Intelligence</span><i>✦</i><span class="w3">Product</span><i>✦</i><span class="w0">Data</span><i>✦</i><span class="w1">Insight</span><i>✦</i><span class="w2">Intelligence</span><i>✦</i><span class="w3">Product</span><i>✦</i><span class="w0">Data</span><i>✦</i><span class="w1">Insight</span><i>✦</i><span class="w2">Intelligence</span><i>✦</i><span class="w3">Product</span><i>✦</i></div></div></div>
+<div class="cwrap">
+<div>
+<div class="eye">// contact</div>
+<h2 id="ct">Let’s build something <em>useful.</em></h2>
+<p class="lead">Have a project, idea, or opportunity in mind? Drop a card in my inbox and I’ll write back.</p>
+<div class="dial">
+<div class="lab">email</div><div class="addr">akshaych899<b>@</b>gmail.com</div>
+<div class="row"><a class="btn2 arr" href="mailto:akshaych899@gmail.com"><span>Email me</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a><button class="btn2 g" id="cpy" type="button" aria-label="Copy email address">Copy email</button></div>
+<div class="lab">find me</div>
+<div class="row"><a class="btn2 k arr" href="https://www.linkedin.com/in/akshaydorasrichintha" target="_blank" rel="noopener"><span>LinkedIn</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="btn2 k arr" href="https://github.com/akshayxstack" target="_blank" rel="noopener"><span>GitHub</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+<div class="lab">resume</div>
+<div class="row"><a class="btn2 g" href="Akshay_Resume.pdf" download="Akshay_Resume.pdf"><span>Download CV</span><small>PDF</small><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a></div>
+</div>
+<div class="meta"><span>English · Telugu · Hindi</span></div>
+</div>
+<div>
+<div class="card"><div class="pm" aria-hidden="true">POSTED<br>IN INDIA<br>★</div><div class="stamp" aria-hidden="true"><div>IST<b>2026</b>AK</div></div>
+<div class="hw">Dear Akshay,</div><p class="n">Opens your email app with the message ready to send.</p>
+<form id="mf"><label>Your name<input name="n" autocomplete="name" placeholder="Jane from Acme" required></label><label>Message<textarea name="m" rows="4" placeholder="I’d like to talk about…" required></textarea></label>
+<button class="btn2" type="submit"><span>Send it</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form>
+<div class="hint2">Nothing is stored on this site.</div></div>
+</div>
+</div>
+<footer class="cfoot"><span class="sig">© 2026 Akshay</span><a href="#hero">↑ back to top</a></footer>
+</section>
+<script>
+(function(){
+var hero=document.getElementById("hero"),bulb=document.getElementById("bulb"),on=true;
+var ct=document.getElementById("contact");function toggle(){on=!on;ct.classList.toggle("off",!on);hero.classList.toggle("on",on);hero.classList.toggle("off",!on);bulb.setAttribute("aria-pressed",on);var w=document.getElementById("bulbwrap");if(w.animate&&!matchMedia("(prefers-reduced-motion:reduce)").matches)w.animate([{transform:"rotate(16deg)"},{transform:"rotate(-12deg)"},{transform:"rotate(9deg)"},{transform:"rotate(-7deg)"},{transform:"rotate(7deg)"}],{duration:2600,easing:"ease-out"})}
+bulb.addEventListener("click",toggle);
+var tb=document.getElementById("tb"),ti=document.getElementById("ti"),still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function L(u,t){return '<a href="'+u+'" target="_blank" rel="noopener">'+t+'</a>'}
+function cmd(n,d){return '<span class="c">'+n+'</span><span class="mu">'+d+'</span>'}
+var C={
+help:cmd("about","who I am")+"\n"+cmd("skills","my toolkit")+"\n"+cmd("projects","things I've built")+"\n"+cmd("experience","internships")+"\n"+cmd("education","where I study")+"\n"+cmd("certs","certifications")+"\n"+cmd("highlights","career highlights")+"\n"+cmd("contact","get in touch")+"\n"+cmd("resume","download my CV")+"\n"+cmd("lights","toggle the bulb")+"\n"+cmd("clear","clear terminal")+"\n<span class='mu'>you can also try standard npm commands :D</span>",
+about:"I turn data into insights, and ideas into <span class='h'>working solutions</span>.\nI'm a <span class='h'>Data Analyst</span> who finds the story inside raw data, then builds visualizations and real-world solutions with it.\nMy interests span <span class='h'>Data Science, AI/ML, Generative AI</span> and <span class='h'>Full-Stack Development</span>.\n<span class='mu'>Data → Analysis → Insight → Intelligence → Product</span>",
+skills:cmd("data","analysis, cleaning, EDA, statistics, insights")+"\n"+cmd("python","Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn")+"\n"+cmd("sql","querying, joins, aggregation, grouping")+"\n"+cmd("bi","Power BI, DAX, Power Query, Excel, data modeling")+"\n"+cmd("ml","regression, classification, XGBoost, SMOTE")+"\n"+cmd("genai","LLMs, Gemini, RAG, LangChain, ChromaDB")+"\n"+cmd("full stack","React, TypeScript, Node, Express, FastAPI, MongoDB")+"\n"+cmd("cloud","Render, MongoDB Atlas, AWS, OCI")+"\n"+cmd("tools","Git, GitHub, VS Code, Postman"),
+projects:"<span class='h'>[1] ElectViz</span>\n<span class='mu'>Election data visualization for media. Power BI, DAX, star schema.</span>\n<span class='h'>[2] FraudGuard AI</span>\n<span class='mu'>ML fraud detection with Gemini explanations. React, Node, FastAPI, XGBoost.</span>\n<span class='h'>[3] DocSensei</span>\n<span class='mu'>Document Q&amp;A with RAG. LangChain, ChromaDB, Streamlit.</span>\n<span class='h'>[4] Insurance Cost Prediction</span>\n<span class='mu'>EDA and regression on insurance charges. Python, Scikit-learn.</span>\n<span class='h'>[5] LeadDesk</span>\n<span class='mu'>Full-stack lead management app. React, Node, MongoDB Atlas, Render.</span>\n\n<span class='mu'>more on</span> "+L("https://github.com/akshayxstack","github.com/akshayxstack"),
+experience:"<span class='h'>Infosys Springboard Virtual Internship 6.0</span> <span class='mu'>13 Feb – 13 Apr 2026</span>\nBuilt ElectViz: turned election datasets into interactive Power BI dashboards using data modeling and visualization.\n\n<span class='h'>IBM SkillsBuild · Generative AI &amp; Cloud Computing</span> <span class='mu'>22 Jun – 31 Jul 2026</span>\nHands-on learning in Generative AI and cloud technologies through project-based work.\n\n<span class='h'>SkillCraft Technology</span> <span class='mu'>1 month</span>\nWeb Development internship.",
+education:"<span class='h'>Lovely Professional University</span>\nB.Tech, Computer Science and Engineering <span class='mu'>2024 – 2028</span>\nMinor: <span class='h'>Data Science</span>\n<span class='mu'>Areas: DSA, DBMS, OS, Networks, OOP, ML, Deep Learning, NLP, GenAI</span>",
+certs:"• NASSCOM Generative AI Certification <span class='mu'>Jun 2026</span>\n• Agentic AI Certified Foundations Associate, Oracle <span class='mu'>Jul 2026</span>\n• Oracle Data Platform Certified Foundations Associate <span class='mu'>Jun 2026</span>\n• Programming using Java, Infosys Springboard <span class='mu'>Feb 2026</span>\n• Operating Systems Basics, Cisco <span class='mu'>Aug 2025</span>\n• Backend REST API with Node.js, Udemy <span class='mu'>Nov 2024</span>",
+highlights:"• <span class='h'>Data Visualization</span>  election-data solution with Power BI and structured data modeling\n• <span class='h'>AI / ML</span>  machine-learning systems for predictive analytics and fraud detection\n• <span class='h'>Generative AI</span>  document Q&amp;A (RAG) with embeddings and vector search\n• <span class='h'>Full Stack</span>  apps spanning frontend, backend, databases and deployment\n• <span class='h'>Internships</span>  Infosys Springboard 6.0, IBM SkillsBuild Gen AI &amp; Cloud",
+contact:"<span class='h'>Let's build something useful.</span>\n"+cmd("email",L("mailto:akshaych899@gmail.com","akshaych899@gmail.com"))+"\n"+cmd("phone","+91 8331929577")+"\n"+cmd("github",L("https://github.com/akshayxstack","github.com/akshayxstack"))+"\n"+cmd("linkedin",L("https://www.linkedin.com/in/akshaydorasrichintha","linkedin.com/in/akshaydorasrichintha")),
+whoami:"<span class='r'>akshay</span> — Data Analyst. I turn data into insights, and ideas into working solutions.",
+"sudo hire akshay":"<span class='g'>✔ permission granted</span>\nOffer letter queued. Great choice — run <span class='h'>contact</span> to make it official."};
+C.skill=C.skills;C.project=C.projects;C.cert=C.certs;C.certifications=C.certs;C.edu=C.education;C.exp=C.experience;C.highlight=C.highlights;C.achievements=C.highlights;C.achievement=C.highlights;
+function add(h,c){var d=document.createElement("div");d.innerHTML=h;if(c)d.className=c;tb.appendChild(d);tb.scrollTop=tb.scrollHeight}
+function run(raw){var c=Nav.norm(raw);if(!c)return;
+ hist.push(raw);hi=hist.length;
+ add('<span class="pr">❯ <em>npm</em> <span>'+c.replace(/</g,"&lt;")+'</span></span>');
+ if(c==="clear"){tb.innerHTML="";return}
+ if(c==="contact"||c==="hire"){add("scrolling to <span class='h'>contact</span>…");setTimeout(function(){ct.scrollIntoView({behavior:still?"auto":"smooth"})},400);return}
+ var rt=Nav.routes[c];
+ if(rt&&c!=="contact"){if(c==="home"){add("you are already home");return}add("opening <span class='h'>"+c+"</span>…");setTimeout(function(){Nav.go(rt[0],rt[1])},250);return}
+ if(c==="resume"){add("downloading <span class='h'>Akshay_Resume.pdf</span>…");document.getElementById("cvl").click();return}
+ if(c==="lights"){toggle();add("light switched "+(on?"<span class='h'>on</span>":"<span class='h'>off</span>"));return}
+ add(C[c]||("command not found: "+c.replace(/</g,"&lt;")+" — type <span class='h'>help</span>"))}
+var hist=[],hi=0,names=Object.keys(C).concat(["clear","lights","resume"]);
+ti.addEventListener("keydown",function(e){
+ if(e.key==="Enter"){run(ti.value);ti.value=""}
+ else if(e.key==="ArrowUp"){if(hi>0)ti.value=hist[--hi];e.preventDefault()}
+ else if(e.key==="ArrowDown"){ti.value=hi<hist.length-1?hist[++hi]:"";hi=Math.min(hi+1,hist.length)}
+ else if(e.key==="Tab"){e.preventDefault();var v=ti.value.toLowerCase(),m=names.filter(function(n){return n.indexOf(v)===0});if(v&&m.length)ti.value=m[0]}});
+var mf=document.getElementById("mf");mf.addEventListener("submit",function(e){e.preventDefault();var n=mf.n.value.trim(),m=mf.m.value.trim();if(!n||!m)return;location.href="mailto:akshaych899@gmail.com?subject="+encodeURIComponent("Hello Akshay, from "+n)+"&body="+encodeURIComponent(m+"\n\n"+n)});
+var cpy=document.getElementById("cpy");cpy.addEventListener("click",function(){var t="akshaych899@gmail.com";function ok(){cpy.textContent="Copied ✓";setTimeout(function(){cpy.textContent="Copy email"},1800)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){})}else{var x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();try{document.execCommand("copy");ok()}catch(e){}x.remove()}});
+document.querySelectorAll(".qk button").forEach(function(b){b.addEventListener("click",function(){run(b.dataset.c)})});
+document.getElementById("win").addEventListener("click",function(e){if(!getSelection().toString()&&e.target.tagName!=="A")ti.focus()});
+function typeCmd(c,cb){if(still){run(c);cb&&cb();return}var i=0;(function k(){ti.value=c.slice(0,i++);if(i<=c.length)setTimeout(k,70);else setTimeout(function(){ti.value="";run(c);cb&&setTimeout(cb,600)},350)})()}
+add('Type <span class="r">"help"</span> to see available commands, or press <span class="h">Tab</span> to autocomplete.');
+var pend=null;try{pend=sessionStorage.getItem("akshay-cmd");sessionStorage.removeItem("akshay-cmd")}catch(e){}
+if(pend)setTimeout(function(){typeCmd(pend)},600);else setTimeout(function(){typeCmd("help")},900);
+var w=["Data Analyst","AI / ML Explorer","Full-Stack Builder"],i=0,j=0,d=0,el=document.getElementById("t");
+if(still){el.textContent=w[0];return}
+(function tick(){var s=w[i];j+=d?-1:1;el.textContent=s.slice(0,j);var t=d?35:75;
+ if(!d&&j===s.length){d=1;t=1600}else if(d&&j===0){d=0;i=(i+1)%w.length;t=350}setTimeout(tick,t)})();
+})();
+</script>
+</body>
+</html>

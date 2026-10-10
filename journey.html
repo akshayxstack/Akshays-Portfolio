@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Education &amp; Experience — Akshay</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="js/nav.css">
+<script src="js/nav.js"></script>
+<style>
+:root{--esp:#160f0a;--amber:#f0b050;--honey:#ffd89a;--copper:#e0824f;--sage:#a9c18a;--lilac:#b9a2c9;--cream:#f8eddc;--mist:#bfab91;--line:rgba(248,237,220,.13);--p:0}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--esp);color:var(--cream);font-family:"Geist",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wall{position:fixed;inset:0;z-index:-1;transform:translateZ(0);background:linear-gradient(105deg,#110a06,#241610 55%,#2d1d16)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--honey);outline-offset:3px}
+.back{position:fixed;top:20px;left:clamp(16px,3vw,44px);z-index:20;font:500 14px "Geist Mono",monospace;color:var(--amber);text-decoration:none;padding:8px 14px;border-radius:99px;border:1px solid rgba(227,168,87,.35);background:rgba(13,9,7,.9)}
+.back:hover{background:rgba(227,168,87,.18)}
+.prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--copper),var(--amber),var(--honey));z-index:40}
+.dots{position:fixed;right:clamp(10px,2vw,28px);top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;gap:14px}
+.dots a{width:11px;height:11px;border-radius:50%;border:2px solid rgba(248,237,220,.4);transition:.25s;position:relative}.dots a.on{background:var(--amber);border-color:var(--amber);box-shadow:0 0 12px rgba(240,176,80,.7)}
+.dots a::before{content:attr(data-l);position:absolute;right:20px;top:50%;transform:translateY(-50%);font:500 12px "Geist Mono",monospace;color:var(--cream);background:rgba(13,9,7,.85);padding:3px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}.dots a:hover::before{opacity:1}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+/* intro */
+.intro{padding:118px 0 30px;text-align:center}
+.eye{font:500 14px "Geist Mono",monospace;color:var(--amber);margin-bottom:14px}
+h1{font:800 clamp(46px,6.8vw,96px)/1 "Fraunces",Georgia,serif;letter-spacing:-.03em}h1 em{font-weight:500;color:var(--honey)}
+.intro p{margin:20px auto 0;max-width:32em;font-size:clamp(17px,1.5vw,20px);line-height:1.65;color:#d2c2a9}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.facts span{font:400 13px "Geist Mono",monospace;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:rgba(248,237,220,.04)}
+.facts b{color:var(--honey);font-weight:500}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+/* trail */
+.sechead{display:flex;align-items:center;justify-content:center;gap:14px;margin:70px 0 10px;font:800 clamp(28px,3.4vw,44px)/1 "Fraunces",serif;letter-spacing:-.02em}
+.sechead span{font:400 14px "Geist Mono",monospace;color:var(--mist);letter-spacing:0}
+.sechead svg{width:44px;height:44px;flex:none}
+.trail{position:relative;padding:34px 0 30px}
+.trail::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:0;border-left:2px dashed rgba(248,237,220,.2);transform:translateX(-1px)}
+.fill{position:absolute;left:50%;top:0;width:4px;margin-left:-2px;border-radius:4px;height:calc(var(--p)*100%);background:linear-gradient(var(--copper),var(--amber),var(--honey));box-shadow:0 0 18px rgba(240,176,80,.7)}
+.trav{position:absolute;left:50%;top:calc(var(--p)*100%);width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:radial-gradient(circle,#fff 0 18%,var(--honey) 30%,var(--amber) 62%,transparent 64%);box-shadow:0 0 0 7px rgba(240,176,80,.18),0 0 34px 8px rgba(240,176,80,.55);z-index:3}
+.st{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;margin-bottom:64px;--c:var(--amber)}
+.st:last-child{margin-bottom:10px}
+.st .node{position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;display:grid;place-items:center;background:#241610;border:3px solid rgba(248,237,220,.25);color:rgba(248,237,220,.5);z-index:2;transition:.5s}
+.st .node svg{width:28px;height:28px}
+.st.lit .node{border-color:var(--c);color:var(--c);box-shadow:0 0 0 7px color-mix(in srgb,var(--c) 18%,transparent),0 0 30px -4px var(--c);background:color-mix(in srgb,var(--c) 14%,#241610)}
+.yr{position:absolute;top:calc(50% + 40px);left:50%;transform:translateX(-50%);font:700 12px "Geist Mono",monospace;letter-spacing:.08em;color:var(--c);background:#1a110b;padding:3px 10px;border-radius:99px;border:1px solid color-mix(in srgb,var(--c) 45%,transparent);white-space:nowrap;z-index:2}
+.st .slot{padding:0 clamp(38px,4.6vw,64px)}
+.st:nth-child(odd) .slot{grid-column:1}.st:nth-child(even) .slot{grid-column:2}
+.st .slot .item{transition:transform .5s}
+/* diploma */
+.dip{position:relative;transform-origin:50% 0;animation:sway 7s ease-in-out infinite alternate;max-width:480px;margin-left:auto}
+@keyframes sway{from{transform:rotate(-.9deg)}to{transform:rotate(.9deg)}}
+.dip::before,.dip::after{content:"";position:absolute;top:-34px;width:2px;height:36px;background:#6b4a29}
+.dip::before{left:22%;transform:rotate(14deg);transform-origin:50% 100%}.dip::after{right:22%;transform:rotate(-14deg);transform-origin:50% 100%}
+.frame{position:relative;padding:12px;border-radius:6px;background:linear-gradient(135deg,#d8a84e,#8a5a1c 50%,#e7c273);box-shadow:0 30px 50px -24px #000,0 0 60px -30px var(--c)}
+.paper{position:relative;padding:28px 26px 26px;border-radius:2px;color:#2a1608;background:#f6e9d2;background-image:radial-gradient(rgba(120,80,40,.08) 1px,transparent 1.4px);background-size:14px 14px;border:2px solid #b98b3a;outline:2px solid rgba(185,139,58,.5);outline-offset:-9px}
+.paper .k{font:700 11px "Geist Mono",monospace;letter-spacing:.2em;color:#8a5a1c;text-align:center}
+.paper h3{font:800 clamp(24px,2.4vw,32px)/1.1 "Fraunces",serif;text-align:center;margin:8px 0 4px;color:#2a1608}
+.paper .deg{font:italic 500 19px/1.3 "Fraunces",serif;text-align:center;color:#5a3512}
+.paper .rule{height:2px;margin:14px 20px;background:linear-gradient(90deg,transparent,#b98b3a,transparent)}
+.paper .mi{font:600 15px "Geist",sans-serif;text-align:center;color:#2a1608}.paper .mi b{color:#a8581f}
+.paper .ar{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:14px}
+.paper .ar span{font:500 11.5px "Geist Mono",monospace;padding:3px 9px;border:1px solid rgba(90,53,18,.4);border-radius:99px;color:#5a3512}
+.seal{position:absolute;right:-14px;bottom:-18px;width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#f09a62,#c85a2a 70%);color:#fff2e0;font:700 9px/1.25 "Geist Mono",monospace;letter-spacing:.1em;text-align:center;box-shadow:0 8px 14px -6px #000;transform:rotate(-12deg)}
+.seal::after{content:"";position:absolute;inset:5px;border-radius:50%;border:1.5px dashed rgba(255,242,224,.7)}
+.bar{margin:16px 20px 0;height:8px;border-radius:99px;background:rgba(90,53,18,.18);overflow:hidden}.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#e0824f,#f0b050);transition:width 1.6s cubic-bezier(.2,.8,.2,1) .3s}.in .bar i{width:58%}
+.bl{display:flex;justify-content:space-between;margin:6px 20px 0;font:500 11px "Geist Mono",monospace;color:#7a5530}
+/* ticket */
+.tk{--sx:calc(100% - 118px);position:relative;display:grid;grid-template-columns:1fr 118px;max-width:540px;color:#2a1608;background:#f6e9d2;border-radius:10px;
+-webkit-mask:radial-gradient(circle 12px at var(--sx) 0,#0000 97%,#000) top/100% 51% no-repeat,radial-gradient(circle 12px at var(--sx) 100%,#0000 97%,#000) bottom/100% 51% no-repeat;mask:radial-gradient(circle 12px at var(--sx) 0,#0000 97%,#000) top/100% 51% no-repeat,radial-gradient(circle 12px at var(--sx) 100%,#0000 97%,#000) bottom/100% 51% no-repeat}
+.tkw{filter:drop-shadow(0 26px 24px rgba(0,0,0,.5)) drop-shadow(0 0 26px color-mix(in srgb,var(--c) 30%,transparent));transition:transform .4s}
+.st:nth-child(odd) .tkw{margin-left:auto;transform:rotate(-1.4deg)}.st:nth-child(even) .tkw{transform:rotate(1.4deg)}
+.tkw:hover{transform:rotate(0) translateY(-6px)!important}
+.tk .main{padding:20px 18px 18px 22px;position:relative}
+.tk .main::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--c);border-radius:10px 0 0 10px}
+.tk .no{font:700 10.5px "Geist Mono",monospace;letter-spacing:.16em;color:#8a5a1c}
+.tk h3{font:800 clamp(20px,2vw,25px)/1.15 "Fraunces",serif;margin:6px 0 3px}
+.tk .role{font:600 14px "Geist",sans-serif;color:color-mix(in srgb,var(--c) 55%,#2a1608)}
+.tk p{margin-top:10px;font-size:14.5px;line-height:1.55;color:#4a2e17}
+.tk .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.tk .tags span,.tk .tags a{font:500 11.5px "Geist Mono",monospace;padding:3px 9px;border-radius:99px;border:1px solid rgba(42,22,8,.35);color:#4a2e17;text-decoration:none}
+.tk .tags a{background:#2a1608;color:var(--honey);border-color:#2a1608}.tk .tags a:hover{background:#40180a}
+.tk .stub{border-left:2.5px dashed rgba(42,22,8,.35);padding:20px 14px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;background:color-mix(in srgb,var(--c) 22%,#f6e9d2)}
+.stub .ad{font:700 10px "Geist Mono",monospace;letter-spacing:.2em;color:#5a3512}
+.stub .dt{font:800 19px/1.15 "Fraunces",serif;color:#2a1608}.stub .dt small{display:block;font:500 11px "Geist Mono",monospace;margin-top:4px;color:#5a3512}
+.stub .bc{width:100%;height:30px;background:repeating-linear-gradient(90deg,#2a1608 0 2px,transparent 2px 4px,#2a1608 4px 5px,transparent 5px 8px,#2a1608 8px 11px,transparent 11px 13px)}
+/* stamps */
+.stamps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:34px 0 20px}
+.sp{--c:var(--amber);position:relative;padding:18px 16px 16px;text-align:center;border-radius:14px;color:var(--cream);border:2.5px dashed color-mix(in srgb,var(--c) 70%,transparent);background:linear-gradient(160deg,color-mix(in srgb,var(--c) 16%,transparent),rgba(248,237,220,.02));transform:rotate(var(--r,0deg));transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;box-shadow:0 18px 30px -20px #000}
+.sp:hover{transform:rotate(0) translateY(-6px) scale(1.03);box-shadow:0 26px 40px -20px #000,0 0 40px -14px var(--c)}
+.sp .ci{width:54px;height:54px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--c);color:var(--c);background:rgba(13,9,7,.4);font:800 15px "Fraunces",serif}
+.sp h4{font:600 15.5px/1.3 "Geist",sans-serif;min-height:41px;display:flex;align-items:center;justify-content:center}
+.sp small{display:block;margin-top:8px;font:500 11.5px "Geist Mono",monospace;color:var(--mist)}.sp small b{color:var(--c);font-weight:500}
+.sp::after{content:attr(data-m);position:absolute;right:10px;top:8px;font:700 10px "Geist Mono",monospace;letter-spacing:.1em;color:var(--c);opacity:.8}
+/* finish */
+.finish{position:relative;text-align:center;padding:70px 0 150px}
+.flag{display:inline-block;font:700 12px "Geist Mono",monospace;letter-spacing:.14em;color:var(--esp);background:var(--amber);padding:5px 14px;border-radius:6px;margin-bottom:16px}
+.finish h2{font:italic 500 clamp(28px,3.6vw,48px)/1.25 "Fraunces",serif;color:var(--honey);max-width:20em;margin:0 auto}
+.btn2{--f:#f5a574;--r:#d9763f;--o:#40180a;--t:#3a1405;display:inline-flex;align-items:center;gap:10px;margin-top:28px;font:700 14.5px "Geist Mono",monospace;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:var(--t);padding:15px 26px;border-radius:12px;border:2.5px solid var(--o);background:linear-gradient(var(--r) 0 4px,var(--f) 4px calc(100% - 4px),var(--r) calc(100% - 4px));box-shadow:0 5px 0 var(--o),0 14px 22px -8px rgba(0,0,0,.55);transition:transform .12s,box-shadow .12s}
+.btn2:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--o),0 18px 26px -8px rgba(0,0,0,.6)}.btn2:active{transform:translateY(5px);box-shadow:0 0 0 var(--o)}
+/* dock */
+.dock{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(500px,92vw);z-index:30}
+.msg{text-align:center;font:400 13px "Geist Mono",monospace;color:#9fd18b;margin-bottom:8px;opacity:0;transition:opacity .25s;text-shadow:0 1px 4px #000}.msg.show{opacity:1}
+.tin{display:flex;align-items:center;gap:9px;padding:12px 20px;border-radius:99px;background:rgba(13,9,7,.92);border:1px solid rgba(227,168,87,.4);box-shadow:0 20px 40px -16px #000;font:400 15px "Geist Mono",monospace;color:var(--amber);cursor:text}
+.tin em{font-style:normal;color:#7d6a55}.tin input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--cream);font:inherit;caret-color:var(--amber)}.tin input::placeholder{color:#6b5844}
+@media(max-width:1100px){.dots{display:none}}
+@media(max-width:860px){
+ .trail::before{left:26px}.fill{left:26px}.trav{left:26px}
+ .st{grid-template-columns:1fr;padding-left:62px}.st .node{left:26px;top:34px;margin-top:0;width:50px;height:50px;margin-left:-25px}
+ .yr{position:static;transform:none;justify-self:start;margin-bottom:6px}
+ .st:nth-child(odd) .slot,.st:nth-child(even) .slot{grid-column:1;padding:0}
+ .dip{margin:34px 0 0;max-width:none}.st .node{top:24px}.st:nth-child(odd) .tkw{margin:0;transform:none}.st:nth-child(even) .tkw{transform:none}
+ .tk{grid-template-columns:1fr;--sx:-100px}.tk{-webkit-mask:none;mask:none}.tk .stub{border-left:0;border-top:2.5px dashed rgba(42,22,8,.35);flex-direction:row;gap:10px;padding:12px 16px}.stub .bc{width:90px}
+ .stamps{grid-template-columns:repeat(2,1fr);gap:14px}
+}
+@media(max-width:420px){.stamps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.dip{animation:none}.bar i{transition:none;width:58%}}
+
+/* polish */
+.now{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font:400 13.5px "Geist Mono",monospace;color:var(--mist)}
+.now i{width:8px;height:8px;border-radius:50%;background:var(--amber);animation:ping 2s infinite}@keyframes ping{70%{box-shadow:0 0 0 9px rgba(240,176,80,0)}0%{box-shadow:0 0 0 0 rgba(240,176,80,.6)}}
+.now b{color:var(--honey);font-weight:500}
+.aside{padding:0 clamp(38px,4.6vw,64px)}
+.sticky{position:relative;width:min(300px,100%);padding:30px 22px 22px;background:linear-gradient(160deg,#f8e08a,#eec75a);color:#3a2a0a;transform:rotate(2.6deg);transform-origin:50% 0;box-shadow:0 18px 26px -12px rgba(0,0,0,.65),inset 0 -34px 40px -30px rgba(150,100,0,.4);animation:flap 6s ease-in-out infinite;transition:transform .3s}
+.sticky:hover{transform:rotate(0)}@keyframes flap{0%,100%{transform:rotate(2.6deg)}50%{transform:rotate(1.2deg)}}
+.sticky::before{content:"";position:absolute;left:50%;top:-12px;width:64px;height:24px;margin-left:-32px;background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.3);transform:rotate(-2deg)}
+.sticky h5{font:600 28px/1 "Caveat",cursive;margin-bottom:8px}
+.sticky ul{list-style:none;padding:0;display:grid;gap:7px}.sticky li{font:600 22px/1.15 "Caveat",cursive}
+.sticky li::before{content:"✓ ";color:#a8581f}.sticky li.nx::before{content:"→ "}
+.sticky .sk{display:block;margin-top:12px;font:600 21px/1 "Caveat",cursive;color:#a8581f;transform:rotate(-2deg)}
+.st.lit .node{animation:pulse 2.6s ease-out 1}@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--c) 70%,transparent),0 0 30px -4px var(--c)}100%{box-shadow:0 0 0 26px transparent,0 0 30px -4px var(--c)}}
+.tk .stub{transition:transform .35s cubic-bezier(.2,.8,.2,1)}.tkw:hover .stub{transform:translateX(7px) rotate(1.4deg)}
+.tk .bc{transition:opacity .3s}.tkw:hover .bc{opacity:.6}
+.dur{display:inline-block;margin-top:10px;font:700 10.5px "Geist Mono",monospace;letter-spacing:.1em;color:#fff;background:color-mix(in srgb,var(--c) 70%,#2a1608);padding:3px 9px;border-radius:5px}
+.sp{overflow:hidden}.sp::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.16) 50%,transparent 62%);transform:translateX(-120%);transition:transform .7s}.sp:hover::before{transform:translateX(120%)}
+.sechead::after{content:"";flex:1;max-width:120px;height:2px;background:linear-gradient(90deg,var(--line),transparent)}
+.sechead::before{content:"";flex:1;max-width:120px;height:2px;background:linear-gradient(270deg,var(--line),transparent)}
+.cnt{font:700 12px "Geist Mono",monospace;letter-spacing:.1em;color:var(--mist);text-align:center;margin-top:8px}
+.tag{display:inline-block;margin-top:10px}
+@media(max-width:860px){.aside{padding:0;margin-top:26px}.sticky{margin:0 auto}}
+@media(prefers-reduced-motion:reduce){.sticky,.now i,.st.lit .node{animation:none}}
+@media(max-width:600px){.seal{right:4px}}
+</style>
+</head>
+<body>
+<div class="wall"></div><div class="prog" id="prog"></div>
+<nav class="dots" aria-label="Sections"><a href="#top" data-l="intro" class="on"></a><a href="#education" data-l="education"></a><a href="#experience" data-l="experience"></a><a href="#certs" data-l="certifications"></a></nav>
+<a class="back" href="index.html" id="home">← home</a>
+
+<header class="wrap intro" id="top">
+<div class="eye">// education &amp; experience</div>
+<h1>The path <em>so far.</em></h1>
+<p>Where I study, where I’ve worked, and what I’ve picked up along the way.</p>
+<div class="now"><i></i><span>currently <b>B.Tech, year 3</b> · exploring <b>agentic AI</b></span></div>
+<div class="facts rv"><span><b>B.Tech</b> CSE · LPU</span><span><b>3</b> internships</span><span><b>6</b> certifications</span></div>
+</header>
+
+<main class="wrap">
+<h2 class="sechead rv" id="education"><svg viewBox="0 0 48 48" fill="none" stroke="#e0824f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18L24 8l21 10-21 10z"/><path d="M12 23v10c0 3 6 6 12 6s12-3 12-6V23M45 18v12"/></svg>Education <span>where I study</span></h2>
+<section class="trail" id="trailA">
+<div class="fill"></div><div class="trav"></div>
+<article class="st rv" style="--c:#e0824f"><div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg></div><div class="yr">2024 → 2028</div>
+<div class="slot"><div class="dip item"><div class="frame"><div class="paper"><div class="k">LOVELY PROFESSIONAL UNIVERSITY</div><h3>Bachelor of Technology</h3><div class="deg">Computer Science &amp; Engineering</div><div class="rule"></div><div class="mi">Minor in <b>Data Science</b></div>
+<div class="ar"><span>DSA</span><span>DBMS</span><span>OS</span><span>Networks</span><span>OOP</span><span>ML</span><span>Deep Learning</span><span>NLP</span><span>GenAI</span></div>
+<div class="bar"><i></i></div><div class="bl"><span>2024</span><span>in progress</span><span>2028</span></div></div>
+<div class="seal">B.TECH<br>CSE</div></div></div></div>
+<aside class="aside"><div class="sticky"><h5>right now</h5><ul><li>B.Tech, year 3</li><li>Data Science minor</li><li>Power BI + Python</li><li class="nx">building with agentic AI</li></ul><span class="sk">still learning ✎</span></div></aside></article>
+</section>
+
+<h2 class="sechead rv" id="experience"><svg viewBox="0 0 48 48" fill="none" stroke="#f0b050" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="14" width="38" height="26" rx="4"/><path d="M17 14V9a2 2 0 012-2h10a2 2 0 012 2v5M5 26h38M21 26v4h6v-4"/></svg>Experience <span>where I’ve worked</span></h2>
+<section class="trail" id="trailB">
+<div class="fill"></div><div class="trav"></div>
+
+<article class="st rv" style="--c:#a9c18a"><div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div><div class="yr">1 MONTH</div>
+<div class="slot"><div class="tkw item"><div class="tk"><div class="main"><div class="no">INTERNSHIP · 01</div><h3>SkillCraft Technology</h3><div class="role">Web Development Intern</div><span class="dur">1 MONTH</span><p>A month of hands-on web development, learning how real pages are structured, styled and shipped.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+<div class="stub"><div class="ad">ADMIT ONE</div><div class="dt">1 mo<small>web dev</small></div><div class="bc"></div></div></div></div></div></article>
+
+<article class="st rv" style="--c:#f0b050"><div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div class="yr">FEB – APR 2026</div>
+<div class="slot"><div class="tkw item"><div class="tk"><div class="main"><div class="no">INTERNSHIP · 02</div><h3>Infosys Springboard</h3><div class="role">Virtual Internship 6.0</div><span class="dur">2 MONTHS</span><p>Turned election datasets into interactive Power BI dashboards using data modeling and visualization. This became ElectViz.</p><div class="tags"><span>Power BI</span><span>DAX</span><span>Data Modeling</span><a href="#" data-go="projects">See ElectViz →</a></div></div>
+<div class="stub"><div class="ad">ADMIT ONE</div><div class="dt">13 Feb<small>to 13 Apr 2026</small></div><div class="bc"></div></div></div></div></div></article>
+
+<article class="st rv" style="--c:#b9a2c9"><div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 01-.6-8.96A6 6 0 0118 8.5 4 4 0 0117.5 18z"/></svg></div><div class="yr">JUN – JUL 2026</div>
+<div class="slot"><div class="tkw item"><div class="tk"><div class="main"><div class="no">INTERNSHIP · 03</div><h3>IBM SkillsBuild</h3><div class="role">Generative AI &amp; Cloud Computing</div><span class="dur">~6 WEEKS</span><p>Project-based learning in Generative AI and cloud technologies, building hands-on skills with both.</p><div class="tags"><span>Generative AI</span><span>Cloud</span></div></div>
+<div class="stub"><div class="ad">ADMIT ONE</div><div class="dt">22 Jun<small>to 31 Jul 2026</small></div><div class="bc"></div></div></div></div></div></article>
+</section>
+
+<h2 class="sechead rv" id="certs"><svg viewBox="0 0 48 48" fill="none" stroke="#ffd89a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="19" r="12"/><path d="M17 30l-4 13 11-5 11 5-4-13"/></svg>Certifications <span>collected so far</span></h2>
+<section class="stamps" aria-label="Certifications">
+<article class="sp rv" data-m="JUL 2026" style="--c:#e0824f;--r:-1.6deg"><div class="ci">O</div><h4>Agentic AI Certified Foundations Associate</h4><small><b>Oracle</b></small></article>
+<article class="sp rv" data-m="JUN 2026" style="--c:#f0b050;--r:1.4deg;transition-delay:.08s"><div class="ci">N</div><h4>Generative AI Certification</h4><small><b>NASSCOM</b></small></article>
+<article class="sp rv" data-m="JUN 2026" style="--c:#e0824f;--r:-1deg;transition-delay:.16s"><div class="ci">O</div><h4>Data Platform Certified Foundations Associate</h4><small><b>Oracle</b></small></article>
+<article class="sp rv" data-m="FEB 2026" style="--c:#b9a2c9;--r:1.6deg"><div class="ci">I</div><h4>Programming using Java</h4><small><b>Infosys Springboard</b></small></article>
+<article class="sp rv" data-m="AUG 2025" style="--c:#a9c18a;--r:-1.4deg;transition-delay:.08s"><div class="ci">C</div><h4>Operating Systems Basics</h4><small><b>Cisco</b></small></article>
+<article class="sp rv" data-m="NOV 2024" style="--c:#ffd89a;--r:1.2deg;transition-delay:.16s"><div class="ci">U</div><h4>Backend REST API with Node.js</h4><small><b>Udemy</b></small></article>
+</section>
+<div class="cnt rv">6 CERTIFICATIONS · 5 ISSUERS</div>
+</main>
+
+<footer class="wrap finish rv">
+<div class="flag">NEXT STOP</div>
+<h2>Graduating 2028, and exploring agentic AI along the way.</h2>
+<a class="btn2" href="#" data-go="contact">Get in touch <span aria-hidden="true">→</span></a>
+</footer>
+
+<div class="dock"><div class="msg" id="msg" aria-live="polite"></div>
+<label class="tin"><span>❯</span><em>npm</em><input id="ti" aria-label="Type a command" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type a command, try help"></label></div>
+<script>
+(function(){
+var d=document,ti=d.getElementById("ti"),msg=d.getElementById("msg"),still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var els=d.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.15});els.forEach(function(c){io.observe(c)})}else els.forEach(function(c){c.classList.add("in")});
+function say(t){msg.textContent=t;msg.classList.add("show");clearTimeout(say.t);say.t=setTimeout(function(){msg.classList.remove("show")},3200)}
+function run(raw){Nav.handle(raw,{say:say})}
+ti.addEventListener("keydown",function(e){if(e.key==="Enter"){run(ti.value);ti.value=""}});
+d.getElementById("home").addEventListener("click",function(e){e.preventDefault();run("home")});
+d.querySelectorAll("[data-go]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();run(a.getAttribute("data-go"))})});
+var prog=d.getElementById("prog"),dots=[].slice.call(d.querySelectorAll(".dots a")),secs=dots.map(function(a){return d.querySelector(a.getAttribute("href"))});
+var trails=[].slice.call(d.querySelectorAll(".trail")),sts=[].slice.call(d.querySelectorAll(".st"));
+function onS(){var h=d.documentElement.scrollHeight-innerHeight;prog.style.transform="scaleX("+(h>0?scrollY/h:0)+")";
+ var cur=0;secs.forEach(function(e,i){if(e&&e.getBoundingClientRect().top<innerHeight*.45)cur=i});dots.forEach(function(a,i){a.classList.toggle("on",i===cur)});
+ trails.forEach(function(t){var r=t.getBoundingClientRect(),p=Math.max(0,Math.min(1,(innerHeight*.55-r.top)/r.height));t.style.setProperty("--p",p)});
+ sts.forEach(function(s){var r=s.getBoundingClientRect();s.classList.toggle("lit",r.top+r.height/2<innerHeight*.6)})}
+addEventListener("scroll",onS,{passive:true});addEventListener("resize",onS);onS();
+})();
+</script>
+</body>
+</html>
